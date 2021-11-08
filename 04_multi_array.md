@@ -139,9 +139,9 @@ $ ./matrix_sum < input_matrix_a_b.dat
   1.43
 ````
 
-実行例：プログラムの実行ファイル名を matmul としている。
+実行例：プログラムの実行ファイル名を mul_mat_vec としている。
 ````
-$ ./matmul < matrixAb.dat
+$ ./mul_mat_vec < matrixAb.dat
   -15.83
    19.66
    42.60
