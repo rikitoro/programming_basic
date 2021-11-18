@@ -1,3 +1,5 @@
+## 例題1.
+
 ````C
 #include <stdio.h>
 
@@ -14,9 +16,54 @@ int main(void) {
       result = square(i);
       printf("square(%d) = %d", i, result);
   }
+  
+  return 0;
 }
 
 int square(int n) {
   return n * n;
 }
+````
+
+````
+square(10) = 9
+square(-3) = 9
+square(-2) = 4
+square(-1) = 1
+square(0) = 0
+square(1) = 1
+square(2) = 4
+square(3) = 9
+````
+
+---
+
+## 例題2.
+
+````C
+#include <stdio.h>
+
+#define PI 3.14
+
+double area_of_circle(double radius);
+
+int main(void) {
+
+  double r;
+  
+  scanf("%lf", &r);
+  printf("Area of circle with radius %.2f : %.2f \n", r, area_of_circle(r));
+  return 0;
+}
+
+double area_of_circle(double radius) {
+  double area = PI * radius * radius;
+  return area;
+}
+````
+
+
+````
+>5.0
+Area of circle with radius 5.00 : 78.50 
 ````
