@@ -3,7 +3,9 @@
 ````C
 #include <stdio.h>
 
+//Function prototype
 int square(int n);
+
 
 int main(void) {
 
@@ -13,16 +15,18 @@ int main(void) {
   printf("square(3) = %d", result);
   
   for (int i = -3; i < 4; ++i) {
-      result = square(i);
+      result = square(i); // calling fucntion square with argument i
       printf("square(%d) = %d", i, result);
   }
   
   return 0;
 }
 
-int square(int n) {
+// function definition
+int square(int n) { // parameter: n
   return n * n;
 }
+
 ````
 
 実行例:
