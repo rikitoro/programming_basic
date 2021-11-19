@@ -1,4 +1,4 @@
-## 例題 1.
+## 例題 1. 入力された整数値の二乗を計算して返す関数
 
 ````C
 #include <stdio.h>
@@ -25,6 +25,7 @@ int square(int n) {
 }
 ````
 
+実行例:
 ````
 square(10) = 9
 square(-3) = 9
@@ -38,7 +39,7 @@ square(3) = 9
 
 ---
 
-## 例題 2.
+## 例題 2. 半径が与えられると円の面積を計算して返す関数
 
 ````C
 #include <stdio.h>
@@ -62,7 +63,7 @@ double area_of_circle(double radius) {
 }
 ````
 
-
+実行例：
 ````
 >5.0
 Area of circle with radius 5.00 : 78.50 
@@ -70,7 +71,36 @@ Area of circle with radius 5.00 : 78.50
 
 ---
 
-### 例題 3.
+### 例題 3 Hello! How are you? と表示する手続き(void 関数)
+
+
+````
+#include <stdio.h>
+
+void hello(void);
+
+int main(void) {
+
+  hello();
+
+  return 0;
+}
+
+
+void hello(void) {
+  printf("Hello!\n");
+  printf("How are you?\n");
+}
+````
+
+実行例:
+````
+Hello!
+How are you?
+````
+
+### 例題 4. m, nを入力すると、n行m列の長方形領域を * で埋める手続き(void 関数)
+
 ```C
 #include <stdio.h>
 
@@ -99,6 +129,7 @@ void draw_rectangle(int m, int n) {
 }
 ````
 
+実行例：
 ````
 >5
 >8
