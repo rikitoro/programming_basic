@@ -11,8 +11,8 @@ int main(void) {
 
   int result;
   
-  result = square(3);
-  printf("square(3) = %d", result);
+  result = square(10);
+  printf("square(10) = %d", result);
   
   for (int i = -3; i < 4; ++i) {
       result = square(i); // calling fucntion square with argument i
@@ -31,7 +31,7 @@ int square(int n) { // parameter: n
 
 実行例:
 ````
-square(10) = 9
+square(10) = 100
 square(-3) = 9
 square(-2) = 4
 square(-1) = 1
