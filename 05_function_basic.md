@@ -75,7 +75,7 @@ Area of circle with radius 5.00 : 78.50
 
 ---
 
-### 例題 3 Hello! How are you? と表示する手続き(void 関数)
+## 例題 3 Hello! How are you? と表示する手続き(void 関数)
 
 
 ````
@@ -103,7 +103,7 @@ Hello!
 How are you?
 ````
 
-### 例題 4. m, nを入力すると、n行m列の長方形領域を * で埋める手続き(void 関数)
+## 例題 4. m, nを入力すると、n行m列の長方形領域を * で埋める手続き(void 関数)
 
 ```C
 #include <stdio.h>
