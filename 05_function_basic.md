@@ -178,3 +178,51 @@ void draw_rectangle(int m, int n) {
 ********
 ********
 ````
+
+---
+
+課題 1. 次の表はあるテストの点数とその評価の関係を示したものである。
+
+| 点数 | 評価 |
+| ---- | ---- |
+| 80点以上 | A |
+| 80点未満かつ60点以上 | B |
+| 60点未満 | C |
+
+テストの点数(整数値) x を渡すと、その評価をあらわす文字('A', 'B', 'C')を返す関数 
+`char grade(int score)` を作成し、その動作を確認せよ。
+
+以下は動作確認用の検証用プログラムとその実行例である。
+
+検証用プログラム:
+````C
+#include <stdio.h>
+
+char grade(int score);
+
+int main(void) {
+
+  printf("grade(95) : %c\n", grade(95));
+  printf("grade(80) : %c\n", grade(80));
+  printf("grade(79) : %c\n", grade(79));
+  printf("grade(72) : %c\n", grade(72));
+  printf("grade(60) : %c\n", grade(60));
+  printf("grade(59) : %c\n", grade(59));
+  printf("grade(20) : %c\n", grade(20));
+  
+  return 0;
+}
+
+// implement grade(int score), here
+````
+
+実行例:
+````
+grade(95) : A
+grade(80) : A
+grade(79) : B
+grade(72) : B
+grade(60) : B
+grade(59) : C
+grade(20) : C
+````
