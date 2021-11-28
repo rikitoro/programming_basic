@@ -74,11 +74,46 @@ Area of circle with radius 5.00 : 78.50
 ````
 
 ---
+## 例題 3. 42 よりも大きな整数値を渡すと 1 を返し、そうでない場合は 0 を返す関数
 
-## 例題 3 Hello! How are you? と表示する手続き(void 関数)
+````C
+#include <stdio.h>
 
+int greater_than_42(int x);
 
+int main(void) {
+
+  for (int score = 40; score <= 45; ++score) {
+    printf("greater_than_42(%d) = %d\n", score, greater_than_42(score));
+  }
+  
+}
+
+int greater_than_42(int x) {
+  if (x > 42) {
+    return 1;
+  } else {
+    return 0;
+  } 
+}
 ````
+
+実行例:
+````
+greater_than_42(40) = 0
+greater_than_42(41) = 0
+greater_than_42(42) = 0
+greater_than_42(43) = 1
+greater_than_42(44) = 1
+greater_than_42(45) = 1
+````
+
+---
+
+## 例題 4. Hello! How are you? と表示する手続き(void 関数)
+
+
+````C
 #include <stdio.h>
 
 void hello(void);
@@ -103,7 +138,7 @@ Hello!
 How are you?
 ````
 
-## 例題 4. m, nを入力すると、n行m列の長方形領域を * で埋める手続き(void 関数)
+## 例題 5. m, nを入力すると、n行m列の長方形領域を * で埋める手続き(void 関数)
 
 ```C
 #include <stdio.h>
