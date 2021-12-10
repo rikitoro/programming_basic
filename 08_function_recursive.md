@@ -72,3 +72,39 @@ int gcd(int m, int n) {
 gcd(24, 18) = 6
 
 ````
+
+### 例題 3. ハノイの棟
+
+````C 
+#include <stdio.h>
+
+void hanoi(int n, const char* from, const char* to, const char* work);
+
+int main(void) {
+
+  hanoi(3, "Left", "Center", "Right");
+
+  return 0;
+}
+
+void hanoi(int n, const char* from, const char* to, const char* work) {
+  if (n > 0) {
+    hanoi(n - 1, from, work, to);
+    printf("move %dth disk from %s to %s\n", n, from, to);
+    hanoi(n - 1, work, to, from);
+  }
+}
+````
+
+[実行例]
+````
+move 1th disk from Left to Center
+move 2th disk from Left to Right
+move 1th disk from Center to Right
+move 3th disk from Left to Center
+move 1th disk from Right to Left
+move 2th disk from Right to Center
+move 1th disk from Left to Center
+
+````
+
