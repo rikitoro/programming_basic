@@ -75,3 +75,33 @@ int main(void) {
   180.0000,    3.1416,   -1.0000
 
 ````
+
+
+````C
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  char first_part[100] = "The quick brown fox ";
+  char last_part[100] = "jumps over the lazy dog";
+
+  printf("%s/ %d letters\n", first_part, strlen(first_part));
+  printf("%s/ %d letters\n", last_part, strlen(last_part));
+
+  strcat(first_part, last_part);
+
+  printf("%s/ %d letters\n", first_part, strlen(first_part));
+  printf("%s/ %d letters\n", last_part, strlen(last_part));
+
+  return 0;
+}
+````
+
+[実行例]
+````
+The quick brown fox / 20 letters
+jumps over the lazy dog/ 23 letters
+The quick brown fox jumps over the lazy dog/ 43 letters
+jumps over the lazy dog/ 23 letters
+
+````
