@@ -105,3 +105,58 @@ The quick brown fox jumps over the lazy dog/ 43 letters
 jumps over the lazy dog/ 23 letters
 
 ````
+
+````C
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+
+  printf("argc = %d\n", argc);
+
+  for (int i = 0; i < argc; ++i){
+    printf("argv[%d] = %s\n", i, argv[i]);
+  }
+  
+  return 0;
+}
+````
+
+[実行例] この例では実行ファイル名を a.out とした。
+````
+$ ./a.out hello cats 22 3.14
+argc = 5
+argv[0] = \a.out
+argv[1] = hello
+argv[2] = cats
+argv[3] = 22
+argv[4] = 3.14
+
+````
+
+
+````C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+  if (argc < 3) {
+    printf("Specify two integer-valued command line arguments.\n");
+    printf("USAGE: ./a.out 31 41\n");
+    exit(1);
+  }
+
+  int num1  = atoi(argv[1]);
+  int num2  = atoi(argv[2]);
+
+  printf(" %d + %d = %d\n", num1, num2, num1 + num2);
+
+  return 0;
+}
+````
+
+[実行例]
+````
+$ ./a.exe 27 18
+ 27 + 18 = 45
+
+````
