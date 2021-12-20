@@ -110,7 +110,7 @@ move 1th disk from Left to Center
 
 ## 課題 1. 組み合わせの数
 
-異なる n 個 ( n は 0 以上の整数) のアイテムから k 個 ( k は 0 以上 k 以下の整数) のアイテムを取り出す場合の数 ![comb_n_k](./fig/Cnk.png) について、次の再帰式が成り立つ。
+異なる n 個 ( n は 0 以上の整数) のアイテムから k 個 ( k は 0 以上 k 以下の整数) のアイテムを取り出すときの組み合わせの数 ![comb_n_k](./fig/Cnk.png) について、次の再帰式が成り立つ。
 
 ![comb_n_k](./fig/Cnk_resursive.png)
 
