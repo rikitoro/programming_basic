@@ -130,3 +130,4 @@ int combination(int n, int k);
 |--:|--|
 |n | 0 以上の整数 |
 |k | 0 以上 n 以下の整数 |
+
