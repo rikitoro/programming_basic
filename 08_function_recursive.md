@@ -46,7 +46,7 @@ input n : 10
 
 ![gcd](./fig/gcd.png)
 
-````
+````C
 #include <stdio.h>
 
 int gcd(int m, int n);
