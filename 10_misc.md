@@ -35,13 +35,29 @@ int main() {
 }
 ````
 
-コンパイル方法 ソースコードファイル prod.c と main.c を指定する(ヘッダファイルは指定しない)
+コンパイル方法 その1 : 
 ````
 $ gcc -o test main.c prod.c
+$ ls
+main.c prod.c prod.h test
+$ ./test
+3
+3
+12
+12
+60
 ````
 
-実行例
+実行例 その2 : 
+-c オプションでオブジェクトファイル(main.o, prod.o)を作ってから
+それらをリンクし実行可能ファイルを作成する。
 ````
+$ gcc -c main.c prod.c
+$ ls
+main.c  main.o  prod.c  prod.h  prod.o
+$ gcc -o test main.o prod.o
+$ ls
+main.c  main.o  prod.c  prod.h  prod.o  test
 $ ./test
 3
 3
