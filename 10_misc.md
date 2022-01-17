@@ -35,9 +35,9 @@ int main() {
 }
 ````
 
-コンパイル方法
+コンパイル方法 ソースコードファイル prod.c と main.c を指定する(ヘッダファイルは指定しない)
 ````
-$ gcc -o test main.c 
+$ gcc -o test main.c prod.c
 ````
 
 実行例
