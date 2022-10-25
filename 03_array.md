@@ -72,8 +72,11 @@ int main()
 *reverse order*
 53 26 59 41 31
 ````
-### 例題3. バブルソート
 
+### 例題3. バブルソート
+データの個数 n を入力後、続けて n 個の整数値を入力すると、
+入力した n 個の整数値を昇順に並べ替えて表示する。
+バブルソートというアルゴリズムに基づいて並べ替えている。
 
 ````c
 #include <stdio.h>
@@ -119,6 +122,27 @@ int main(void) {
 >10
 >3 1 4 1 5 9 2 6 5 3
 1 1 2 3 3 4 5 5 6 9
+````
+
+### 例題4. 文字列
+````c
+#include <stdio.h>
+
+int main(void) {
+
+  char my_name[15] = "Aiko hirose";
+  char your_name[15] = {"Ayashi taro"};
+  
+  printf("My mame: %s\nYour name: %s\n", my_name, your_name);
+
+  return 0;
+}
+````
+
+出力例
+````
+My mame: Aiko hirose
+Your name: Ayashi taro
 ````
 
 ### 課題1. 奇数・偶数の分類
