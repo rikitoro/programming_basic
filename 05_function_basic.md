@@ -143,7 +143,7 @@ How are you?
 ```C
 #include <stdio.h>
 
-void draw_rectangle(int m, int n);
+void draw_rectangle_area(int m, int n);
 
 int main(void) {
 
@@ -152,13 +152,13 @@ int main(void) {
   scanf("%d",&m);
   scanf("%d",&n);
 
-  draw_rectangle(m, n);
+  draw_rectangle_area(m, n);
 
   return 0;
 }
 
 
-void draw_rectangle(int m, int n) {
+void draw_rectangle_area(int m, int n) {
   for (int i = 0; i < m; ++i) {
     for (int j = 0; j < n; ++j) {
       printf("*");
@@ -233,3 +233,21 @@ grade(60) : B
 grade(59) : C
 grade(20) : C
 ````
+
+## 課題3. m, nを入力すると、n行m列の長方形領域の枠を描画する手続き
+
+2つの整数 m, n を入力すると n行m列の長方形領域の枠を * で描画する手続き
+`void draw_rectangle(int m, int n)` を作成しその動作を確認せよ。
+
+実行例：
+````
+>5
+>8
+********
+*      *
+*      *
+*      *
+********
+````
+
+---
