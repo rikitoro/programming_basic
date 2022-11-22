@@ -184,7 +184,7 @@ void draw_rectangle(int m, int n) {
 ## 課題 1. n から m までの和を計算する関数
 
 2つの整数 $n, m$ を引数に与えると、
-$n \le m$ の場合は $n$ から $m$ までの和 $S = \displaystyle{\sum_{k=n}^{m}}$ を返し、
+$n \le m$ の場合は $n$ から $m$ までの和 $S = \displaystyle{\sum_{k=n}^{m} k}$ を返し、
 $n > m$ の場合は0を返す関数`int sum(int n, int m)` を作成しその動作を確認せよ。
 
 ## 課題 2. テストの点数の評価への変換
