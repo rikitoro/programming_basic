@@ -3,7 +3,7 @@
 ````C
 #include <stdio.h>
 
-void add_42(int* x);
+void add_42(int* x); // int型の変数の参照を受け取る(int型の変数の参照の型は int* と指定する)
 
 int main(void) {
   int num = 100;
@@ -18,8 +18,8 @@ int main(void) {
   return 0;
 }
 
-void add_42(int* x) {
-  *x += 42;
+void add_42(int* x) { // int型の変数の参照 x を受け取る
+  *x += 42; // 参照 x が示す変数(値)自体は *x で表す。(*x で int 型の変数だと考えるとよい)
 }
 ````
 
@@ -41,11 +41,11 @@ void swap(int* x, int* y);
 
 int main(void) {
 
-  int x = 3, y = 4;
+  int x = 3, x = 4; // int型の変数 x, y
 
-  printf("x = %d, y = %d\n", x, y);
+  printf("x = %d, x = %d\n", x, x);
 
-  swap(&x, &y);
+  swap(&u, &v); // int型の変数 x, y への参照は &x, &y で表す。
 
   printf("swap(&x, &y) was called\n");
   printf("x = %d, y = %d\n", x, y);
@@ -53,10 +53,10 @@ int main(void) {
   return 0;
 }
 
-void swap(int* x, int* y){
+void swap(int* x, int* y){ // int型の参照 x, yを受け取る。
   int tmp;
 
-  tmp = *x;
+  tmp = *x; // 参照 x が示す変数(値)自体は *x で表す。
   *x = *y;
   *y = tmp;
 }
@@ -65,7 +65,7 @@ void swap(int* x, int* y){
 実行例:
 ````
 x = 3, y = 4
-swap(&x, &y) was called
+swap(&u, &v) was called
 x = 4, y = 3
 ````
 
@@ -78,8 +78,8 @@ x = 4, y = 3
 
 #define N 10 // array size
 
-double average(double* xs, int n);
-// double average(double xs[], int n);
+double average(double* xs, int n);　     // double型の配列を受け取るときは double* 型を指定する  
+// double average(double xs[], int n);   // このように指定してもよい
 
 int main(void) {
   double score[N] = {
@@ -88,7 +88,7 @@ int main(void) {
   };
   double average_score;
 
-  average_score = average(score, N);
+  average_score = average(score, N); // 配列を渡すときは配列名を用いる
   printf("average score : %6.2f", average_score);
 
   return 0;
