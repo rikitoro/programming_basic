@@ -3,28 +3,29 @@
 ````C
 #include <stdio.h>
 
-//Function prototype
-int square(int n);
+// 関数プロトタイプ
+int square(int n); // 関数の返す型、関数名、引数の型(と引数)を宣言する
 
 
 int main(void) {
 
   int result;
   
-  result = square(10);
+  result = square(10); // 引数に int 型の値 10 を渡して関数を呼び出す。
+                       // 関数の返り値を result で受け取っている。
   printf("square(10) = %d", result);
   
   for (int i = -3; i < 4; ++i) {
-      result = square(i); // calling fucntion square with argument i
+      result = square(i); // 引数に int 型の変数 i の値を渡して関数を呼び出す。
       printf("square(%d) = %d", i, result);
   }
   
   return 0;
 }
 
-// function definition
-int square(int n) { // parameter: n
-  return n * n;
+// 関数の定義
+int square(int n) { // int型の値 n を受け取り, int型の値を返す関数
+  return n * n;     // 受け取った値の二乗を返す。
 }
 
 ````
@@ -48,9 +49,12 @@ square(3) = 9
 ````C
 #include <stdio.h>
 
+// マクロ:　コンパイル時(プリプロセス)にプログラム中の変数 PI が
+// すべて 3.14 に置き換えられる。
 #define PI 3.14
 
-double area_of_circle(double radius);
+// 関数プロトタイプ宣言
+double area_of_circle(double radius); // double 型の値を受け取り、double型の値を返す関数
 
 int main(void) {
 
@@ -61,9 +65,9 @@ int main(void) {
   return 0;
 }
 
-double area_of_circle(double radius) {
+double area_of_circle(double radius) { // double 型の値 radius を受け取る
   double area = PI * radius * radius;
-  return area;
+  return area; // double 型の値 area を返す
 }
 ````
 
@@ -116,7 +120,7 @@ greater_than_42(45) = 1
 ````C
 #include <stdio.h>
 
-void hello(void);
+void hello(void); // 引数を受け取らず、値を返さない関数
 
 int main(void) {
 
@@ -143,7 +147,7 @@ How are you?
 ```C
 #include <stdio.h>
 
-void draw_rectangle_area(int m, int n);
+void draw_rectangle_area(int m, int n); // int型の値 m, n を受け取り、値を返さない関数
 
 int main(void) {
 
