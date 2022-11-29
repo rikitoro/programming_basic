@@ -6,11 +6,11 @@
 void add_42(int* x); // int型の変数の参照を受け取る(int型の変数の参照の型は int* と指定する)
 
 int main(void) {
-  int num = 100;
+  int num = 100; // int型の変数 num
 
   printf("num = %d\n", num);
 
-  add_42(&num);  
+  add_42(&num); // 変数 num の参照を渡す。変数 num の参照は &num と表す。
 
   printf("add_42(&num) was called.\n");
   printf("num = %d\n", num);
