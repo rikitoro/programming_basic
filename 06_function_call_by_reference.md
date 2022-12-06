@@ -41,11 +41,11 @@ void swap(int* x, int* y);
 
 int main(void) {
 
-  int x = 3, x = 4; // int型の変数 x, y
+  int x = 3, y = 4; // int型の変数 x, y
 
-  printf("x = %d, x = %d\n", x, x);
+  printf("x = %d, y = %d\n", x, y);
 
-  swap(&u, &v); // int型の変数 x, y への参照は &x, &y で表す。
+  swap(&x, &y); // int型の変数 x, y への参照は &x, &y で表す。
 
   printf("swap(&x, &y) was called\n");
   printf("x = %d, y = %d\n", x, y);
@@ -65,7 +65,7 @@ void swap(int* x, int* y){ // int型の参照 x, yを受け取る。
 実行例:
 ````
 x = 3, y = 4
-swap(&u, &v) was called
+swap(&x, &y) was called
 x = 4, y = 3
 ````
 
