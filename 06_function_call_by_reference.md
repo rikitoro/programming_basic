@@ -78,7 +78,7 @@ x = 4, y = 3
 
 #define N 10 // array size
 
-double average(double* xs, int n);　     // double型の配列を受け取るときは double* 型を指定する  
+double average(double* xs, int n);       // double型の配列を受け取るときは double* 型を指定する  
 // double average(double xs[], int n);   // このように指定してもよい
 
 int main(void) {
